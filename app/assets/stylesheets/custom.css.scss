@@ -1,2 +1,36 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@font-face {
+  font-family: Avenir;
+  src: local("./fonts/AvenirNextLTPro-Regular.otf")
+}
+
+$site-white: #E1E3E3;
+$site-brown: #544D3B;
+$site-black: #262626;
+$site-tan: #A48E74;
+$site-orange: #FF9E43;
+$site-cream: #FFD37C;
+$site-light-grey: #f4f7fb;
+$side-red: #e56c69;
+
+body {
+  background-color: $site-white;
+  color: $site-brown;
+}
+
+.navbar-brand-image {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+
+.hero-unit {
+  background-image:url('volunteer-couple-hero.png');
+  background-size:cover;
+  height:600px;
+
+}
+
+
