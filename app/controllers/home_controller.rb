@@ -7,6 +7,4 @@ class HomeController < ApplicationController
 
   def organization
   end
-
-
 end
