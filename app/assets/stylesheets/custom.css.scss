@@ -26,11 +26,61 @@ body {
   padding: 5px;
 }
 
-.hero-unit {
+.hero-unit1 {
   background-image: image-url("volunteer-couple-hero.png");
-  background-size:cover;
-  height:600px;
+  background-size: cover;
+  height: 650px;
+}
 
+.hero-text {
+  color: $site-white;
+  padding-top: 450px;
+}
+
+.notice {
+  color: $site-orange;
+}
+
+.sub-notice {
+  color: $site-light-grey;
+}
+
+.btn-landing {
+  color: $site-white;
+  background-color: $site-orange;
+}
+
+.point {
+  border: $site-brown 1px solid;
+  padding: 10px 30px;
+  margin: 0px 20px;
+}
+
+.second-head {
+  padding-bottom: 20px;
+}
+
+.container-fluid {
+  padding: 0; 
+}
+
+.no-marg {
+  margin-bottom: 0;
+}
+
+.white-back {
+  background-color: $site-white;
+  margin-bottom: 0;
+}
+
+.hero-unit2 {
+  background-image: image-url("meeting-people.png");
+  background-size: cover;
+  height: 650px;
+}
+
+.no-pad {
+  margin-top: -20px;
 }
 
 

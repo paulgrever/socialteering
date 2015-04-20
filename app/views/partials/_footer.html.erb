@@ -1,0 +1,41 @@
+<div class="footer .navbar-fixed-bottom">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-4 col-xs-6">
+        <h4>Who We Are</h4>
+        <p><strong>Socialteering</strong> is the easiest way to make a difference and meet people making a difference.</p> <%= link_to "Community", root_path %>
+        <p><%= link_to "Supporting Businesses", root_path %></i></p>
+      </div>
+      <div class="col-sm-2 col-xs-6">
+        <h4>Links</h4>
+        <ul class="list-unstyled">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Local Businesses", root_path %></li>
+          <li><%= link_to "Community Organizations", root_path %></li>
+        </ul>
+      </div>
+
+      <div class="visible-xs clearfix"></div>
+
+      <div class="col-sm-2 col-sm-offset-1 col-xs-6">
+        <h4>Stay in Touch</h4>
+        <ul class="list-unstyled">
+          <li><%= link_to "About", "/about" %></li>
+          <li><%= link_to "Contact Us", root_path %></li>
+          <li><%= link_to "Blog", root_path %></li>
+          <li><%= link_to "Instagram", "https://instagram.com/droply.supplies/" %></li>
+        </ul>
+      </div>
+      <div class="col-sm-2 col-sm-offset-1 col-xs-6">
+        <h4>Contact Us</h4>
+        <ul class="list-unstyled">
+          <li><i class="glyphicon glyphicon-globe"></i> Denver, CO</li>
+          <li><i class="glyphicon glyphicon-phone"></i> 1-555-socialT</li>
+          <li><i class="glyphicon glyphicon-envelope"></i> <%= mail_to "socialteering@gmail.com", "socialteering" %></li>
+        </ul>
+        <p>Socialteering &copy;2015</p>
+      </div>
+    </div>
+  </div>
+</div>
