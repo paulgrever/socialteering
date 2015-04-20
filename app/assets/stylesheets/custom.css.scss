@@ -29,7 +29,6 @@ body {
 .hero-unit1 {
   background-image: image-url("volunteer-couple-hero.png");
   background-size: cover;
-  filter: gray;
   height: 650px;
 }
 
@@ -53,8 +52,8 @@ body {
 
 .point {
   border: $site-brown 1px solid;
-  padding: 10px 30px 20px 30px;
-  margin: 0px 20px 0px 20px;
+  padding: 10px 30px;
+  margin: 0px 20px;
 }
 
 .second-head {
@@ -62,26 +61,25 @@ body {
 }
 
 .container-fluid {
-  padding: 0px; 
+  padding: 0; 
 }
 
 .no-marg {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .white-back {
   background-color: $site-white;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .hero-unit2 {
   background-image: image-url("meeting-people.png");
   background-size: cover;
-  filter: gray;
   height: 650px;
 }
 
-.no-pad{
+.no-pad {
   margin-top: -20px;
 }
 
