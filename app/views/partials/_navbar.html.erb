@@ -13,7 +13,7 @@
     </div>
 
         <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
-          <li><%= link_to "Menu", '#' %></li>
+          <li><%= link_to "Volunteer", '#' %></li>
 
           <li><%= link_to "Sign in", "#", data: { toggle: "modal", target: "#signInModal" } %></li>
           <li><%= link_to "Sign up", "#", data: { toggle: "modal", target: "#signUpModal" } %></li>
@@ -26,9 +26,8 @@
               About <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Our Story", "/about" %></li>
-              <li><%= link_to "Contact Us", root_path %></li>
-              <li><%= link_to "Blog", root_path %></li>
+              <li><%= link_to "Local Businesses", business_path %></li>
+              <li><%= link_to "Community Organizations", organization_path %></li>
             </ul>
           </li>
         </ul>  
