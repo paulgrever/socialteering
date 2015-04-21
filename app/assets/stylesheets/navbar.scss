@@ -19,8 +19,12 @@ $side-red: #e56c69;
   bottom: 0;
   width: 100%;
   height: auto;
-  margin-top: 50px;
+  padding: 10px;
   background-color: $site-white;
+}
+
+.footer a {
+  color: $site-brown;
 }
 
 .navbar-fixed-top{
