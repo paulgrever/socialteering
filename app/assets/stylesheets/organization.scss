@@ -15,34 +15,15 @@ $site-cream: #ffd37c;
 $site-light-grey: #f4f7fb;
 $site-red: #e56c69;
 
-.hero-unit4 {
-  background-image: image-url("busy-bar.png");
+.hero-unit5 {
+  background-image: image-url("volunteer.png");
   background-size: cover;
   height: 650px;
   padding-top: 10px;
 }
 
-.hero-text4 {
+.hero-text5 {
   color: $site-white;
   padding-top: 450px;
   margin-top: 0;
-}
-
-// .reverse-block {
-//   background-color: $site-brown;
-//   color: $site-white;
-//   border: 1px $site-white solid;
-// }
-
-.button-pad {
-  margin: 20px;
-}
-
-.side-pads {
-  margin-left: 40px;
-}
-
-.toggler-btn {
-  margin-left: 600px;
-  margin-right: 200px;
 }

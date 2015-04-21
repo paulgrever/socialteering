@@ -48,7 +48,6 @@ body {
 }
 
 .point {
-  border: $site-brown 1px solid;
   padding: 10px 30px;
   margin: 0px 20px;
 }
@@ -61,8 +60,8 @@ body {
   padding: 0; 
 }
 
-.no-marg {
-  margin-bottom: 0;
+#no-marg {
+  margin: 0;
 }
 
 .white-back {
