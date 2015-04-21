@@ -1,0 +1,48 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@font-face {
+  font-family: Avenir;
+  src: local("./fonts/AvenirNextLTPro-Regular.otf");
+}
+
+$site-white: #e1e3e3;
+$site-brown: #544d3b;
+$site-black: #262626;
+$site-tan: #a48e74;
+$site-orange: #ff9e43;
+$site-cream: #ffd37c;
+$site-light-grey: #f4f7fb;
+$side-red: #e56c69;
+
+.hero-unit4 {
+  background-image: image-url("busy-bar.png");
+  background-size: cover;
+  height: 650px;
+  padding-top: 10px;
+}
+
+.hero-text4 {
+  color: $site-white;
+  padding-top: 450px;
+  margin-top: 0;
+}
+
+.reverse-block {
+  background-color: $site-brown;
+  color: $site-white;
+  border: 1px $site-white solid;
+}
+
+.button-pad {
+  margin: 20px;
+}
+
+.side-pads {
+  margin-left: 20px;
+}
+
+.toggler-btn {
+  margin-left: 600px;
+  margin-right: 200px;
+}
