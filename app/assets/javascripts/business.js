@@ -4,10 +4,18 @@
 //     });
 // });
 
-$(document).ready(function(){
-    $("#toggler-btn").click(function(){
+$(document).on('ready page:load', function () {
+      $("#toggler-btn").click(function(){
         $("#toggler").slideToggle("slow");
     });
 
     $("#toggler").hide();
 });
+
+// $(document).ready(function(){
+//     $("#toggler-btn").click(function(){
+//         $("#toggler").slideToggle("slow");
+//     });
+
+//     $("#toggler").hide();
+// });
