@@ -1,0 +1,28 @@
+$site-white: #E1E3E3;
+$site-brown: #544D3B;
+$site-black: #262626;
+$site-tan: #A48E74;
+$site-orange: #FF9E43;
+$site-cream: #FFD37C;
+$site-light-grey: #f4f7fb;
+$side-red: #e56c69;
+
+.navbar-brand-image {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin-bottom: 0;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  background-color: $site-white;
+}
+
+.navbar-fixed-top{
+  margin-bottom: 0;
+}

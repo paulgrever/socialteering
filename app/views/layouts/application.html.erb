@@ -9,17 +9,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="row">
     <%= render "partials/navbar" %>
-  </div>
-  <div class="container">
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: "alert alert-#{name} text-center" %>
     <% end %>
-  </div>
-<div>
-<%= yield %>
-</div>
+
+  <%= yield %>
+
 <%= render "partials/footer" %>
 </body>
 </html>
