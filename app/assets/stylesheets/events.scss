@@ -3,13 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
-    @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
-    body {
-    padding: 60px 0px;
-    background-color: rgb(220, 220, 220);
-  }
-    
-    .event-list {
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+$site-white: #E1E3E3;
+$site-brown: #544D3B;
+$site-black: #262626;
+$site-tan: #A48E74;
+$site-orange: #FF9E43;
+$site-cream: #FFD37C;
+$site-light-grey: #f4f7fb;
+$site-red: #e56c69;
+  
+.hero-unit3{
+  background-image: image-url("people-fun2.png");
+  background-size: cover;
+  height: 650px;
+  padding-top: -100px;
+}
+  .event-list {
     list-style: none;
     font-family: 'Lato', sans-serif;
     margin: 0px;
@@ -17,7 +27,7 @@
   }
   .event-list > li {
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 5px rgb(51, 51, 51);
+    box-shadow: 0px 0px 5px $site-brown;
     box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
     padding: 0px;
     margin: 0px 0px 20px;
@@ -26,13 +36,13 @@
     display: inline-block;
     width: 100%;
     color: rgb(255, 255, 255);
-    background-color: rgb(197, 44, 102);
+    background-color: $site-brown;
     padding: 5px;
     text-align: center;
     text-transform: uppercase;
   }
   .event-list > li:nth-child(even) > time {
-    background-color: rgb(165, 82, 167);
+    background-color: $site-orange;
   }
   .event-list > li > time > span {
     display: none;
@@ -82,7 +92,7 @@
   .event-list > li > .social > ul > li {
     display: table-cell;
     cursor: pointer;
-    color: rgb(30, 30, 30);
+    color: $site-orange;
     font-size: 11pt;
     font-weight: 300;
         padding: 3px 0px;
@@ -102,7 +112,7 @@
   .event-list > li > .info > ul > li:hover,
   .event-list > li > .social > ul > li:hover {
     color: rgb(30, 30, 30);
-    background-color: rgb(200, 200, 200);
+    background-color: $site-tan;
   }
   .facebook a,
   .twitter a,
@@ -180,9 +190,10 @@
       display: block;
       width: 40px;
     }
-        .event-list > li > .social > ul {
-            border-left: 1px solid rgb(230, 230, 230);
-        }
+    .event-list > li > .social > ul {
+      border-left: 1px solid rgb(230, 230, 230);
+    }
+
     .event-list > li > .social > ul > li {      
       display: block;
             padding: 0px;
