@@ -3,15 +3,15 @@
 
 @font-face {
   font-family: Avenir;
-  src: local("./fonts/AvenirNextLTPro-Regular.otf")
+  src: local("./fonts/AvenirNextLTPro-Regular.otf");
 }
 
-$site-white: #E1E3E3;
-$site-brown: #544D3B;
+$site-white: #e1e3e3;
+$site-brown: #544d3b;
 $site-black: #262626;
-$site-tan: #A48E74;
-$site-orange: #FF9E43;
-$site-cream: #FFD37C;
+$site-tan: #a48e74;
+$site-orange: #ff9e43;
+$site-cream: #ffd37c;
 $site-light-grey: #f4f7fb;
 $side-red: #e56c69;
 
@@ -38,7 +38,7 @@ $side-red: #e56c69;
   margin: 20px;
 }
 
-.side-pads{
+.side-pads {
   margin-left: 20px;
 }
 
