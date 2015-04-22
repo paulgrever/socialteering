@@ -1,0 +1,46 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/helpers/events_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/models/user.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1429733615
+  }
+}
