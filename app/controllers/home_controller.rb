@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
   def organization
   end
+
+  def about
+  end
 end
