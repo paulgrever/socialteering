@@ -4,7 +4,7 @@
 //     });
 // });
 
-$(document).on('ready page:load', function () {
+$(document).on("ready page:load", function () {
       $("#toggler-btn").click(function(){
         $("#toggler").slideToggle("slow");
     });
