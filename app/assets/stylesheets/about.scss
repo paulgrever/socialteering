@@ -1,0 +1,29 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+$site-white: #E1E3E3;
+$site-brown: #544D3B;
+$site-black: #262626;
+$site-tan: #A48E74;
+$site-orange: #FF9E43;
+$site-cream: #FFD37C;
+$site-light-grey: #f4f7fb;
+$site-red: #e56c69;
+
+.middle {
+  background-color: $site-brown;
+  color: $site-white;
+  padding: 20px;
+  margin-top: 20px
+}
+.bw {
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: all .5s ease;
+     -moz-transition: all .5s ease;
+       -o-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+          transition: all .5s ease;
+}
+
+.bw:hover {
+  -webkit-filter: grayscale(0%);
+}

@@ -4,5 +4,5 @@ var hideFlashes = function() {
 };
 
 $(document).on("ready page:load", function() {
-    setTimeout(hideFlashes, 4000);
+    setTimeout(hideFlashes, 2000);
 });
