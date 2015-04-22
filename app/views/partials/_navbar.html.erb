@@ -11,11 +11,14 @@
         <span class="icon-bar"></span>
       </button>
     </div>
-
         <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
           <li><%= link_to "Volunteer", events_path %></li>
-          <li><%= link_to "Sign in", "#", data: { toggle: "modal", target: "#signInModal" } %></li>
-          <li><%= link_to "Sign up", "#", data: { toggle: "modal", target: "#signUpModal" } %></li>
+          <% if current_user.present? %>
+            <li> <%= image_tag( current_user.image, class:"img-circle navbar-brand-image") %> <%= current_user.first_name %> </li>
+          <% else %>
+              <li><%= link_to "Sign in with Facebook", "/auth/facebook"%></li>
+          <% end %>
+          
 
           <li><%= link_to '#', id: "cart" do %>
             <span class='glyphicon glyphicon-bookmark' aria-hidden='true'>
@@ -30,5 +33,7 @@
             </ul>
           </li>
         </ul>  
+
+        <%= render "partials/facebook" %>
   </div> 
 </div> 
