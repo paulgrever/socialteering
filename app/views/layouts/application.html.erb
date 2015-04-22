@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Socialteering</title>
-  <%= favicon_link_tag 'favicon.ico' %>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Socialteering</title>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
     <%= render "partials/navbar" %>
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, class: "alert alert-#{name} text-center" %>
-    <% end %>
+    <div class="center-block">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-#{name} text-center" %>
+      <% end %>
+    </div>
 
-  <%= yield %>
+    <%= yield %>
 
-<%= render "partials/footer" %>
-</body>
+    <%= render "partials/footer" %>
+  </body>
 </html>
