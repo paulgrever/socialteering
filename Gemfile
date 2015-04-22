@@ -13,7 +13,9 @@ gem "bcrypt", "~> 3.1.7"
 gem "bootstrap-sass", "~> 3.3.4"
 gem "rails_12factor", group: :production
 gem "figaro"
-gem 'omniauth-facebook'
+gem "omniauth-facebook"
+gem "will_paginate"
+gem "bootstrap-will_paginate"
 
 
 
@@ -28,3 +30,8 @@ group :development, :test do
   gem "factory_girl_rails"
 end
 
+group :test do
+  gem "simplecov", require: false
+  gem "codeclimate-test-reporter", require: nil
+  gem "database_cleaner"
+end
