@@ -1,6 +1,32 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/models/user.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/paulgrever/Documents/rails_lessons/socialteering/app/helpers/application_helper.rb": [
         1,
         null
@@ -17,23 +43,52 @@
         1,
         null
       ],
-      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/models/user.rb": [
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
         1,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        8,
+        null,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         0,
         0,
+        null,
+        null,
+        null,
+        1,
         0,
         0,
         0,
@@ -41,6 +96,6 @@
         null
       ]
     },
-    "timestamp": 1429733615
+    "timestamp": 1429746894
   }
 }
