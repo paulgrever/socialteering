@@ -5,7 +5,6 @@ require "rspec/rails"
 require "capybara/rails"
 require "capybara/rspec"
 require "support/factory_girl"
-require "support/login_helper"
 
 ActiveRecord::Migration.maintain_test_schema!
 

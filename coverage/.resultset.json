@@ -1,0 +1,98 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/models/user.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/helpers/events_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        16,
+        null,
+        null
+      ],
+      "/Users/paulgrever/Documents/rails_lessons/socialteering/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1429763016
+  }
+}
