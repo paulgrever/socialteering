@@ -1,7 +1,12 @@
-<div class="container top">
-  <%= form_for(@organization) do |f| %>
-      <%= f.label "ein"%>
-      <%= f.text_field :ein %>
-      <%= f.submit %>
-  <% end %>
+<div class="container top top">
+  <div class= "row">
+    <%= form_for(@organization) do |f| %>
+      <div class="form-group">
+        <%= f.label "EIN"%>
+      
+        <%= f.text_field :ein, class: "form-control", placeholder: "XXXXXXXXX"%>
+        </div>
+        <%= f.submit %>
+    <% end %>
+  </div>
 </div>
