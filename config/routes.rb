@@ -12,4 +12,5 @@ Rails.application.routes.draw do
 
   #events
   resources :events, only: [:index]
+  resources :organizations
 end

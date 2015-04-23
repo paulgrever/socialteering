@@ -16,6 +16,8 @@ gem "figaro"
 gem "omniauth-facebook"
 gem "will_paginate"
 gem "bootstrap-will_paginate"
+gem "faraday"
+gem "json"
 
 
 
