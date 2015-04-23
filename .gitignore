@@ -16,4 +16,4 @@
 /config/application.yml
 
 # Ignore coverage folder
-/coverage
+/coverage/
