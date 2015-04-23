@@ -1,6 +1,5 @@
 require "rails_helper"
 
-
 RSpec.describe "Unauthenticated user", type: :feature do
   it "is created when logging in" do
     visit root_path
