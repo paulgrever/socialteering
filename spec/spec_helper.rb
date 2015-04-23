@@ -1,5 +1,5 @@
-require "simplecov"
 require "codeclimate-test-reporter"
+require "simplecov"
 Dir[File.dirname(__FILE__) + "/helpers/**/*.rb"].each {|f| require f }
 SimpleCov.start "rails"
 CodeClimate::TestReporter.start
