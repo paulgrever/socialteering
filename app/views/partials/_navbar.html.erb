@@ -29,8 +29,8 @@
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to "About Socialteering", "/about" %></li>
-              <li><%= link_to "Local Businesses Partners", business_path %></li>
-              <li><%= link_to "Community Organizations", organization_path %></li>
+              <li><%= link_to "Local Businesses Partners", business_info_path %></li>
+              <li><%= link_to "Community Organizations", organization_info_path %></li>
               <% if current_user.present?  %>
                 <li class="divider"></li>
                 <li><%= link_to("Sign out", logout_path, method: :delete, id: "sign-out") %></li>
