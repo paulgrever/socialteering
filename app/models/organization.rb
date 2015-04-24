@@ -8,12 +8,11 @@ class Organization < ActiveRecord::Base
 
   def valid_ein
     verifier = OrganizationVerifier.new(ein)
-      if !verifier.validate_response?
-        errors.add(:invalid_ein, "Your EIN was not found.")
-     else
+    if !verifier.validate_response?
+      errors.add(:invalid_ein, "Your EIN was not found.")
+    else
       true
-     end
-
+    end
   end
 
   private

@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: Avenir;
-  src: local("./fonts/AvenirNextLTPro-Regular.otf")
+  src: local("./fonts/AvenirNextLTPro-Regular.otf");
 }
 
 $site-white: #e1e3e3;
@@ -15,10 +15,11 @@ $site-cream: #ffd37c;
 $site-light-grey: #f4f7fb;
 $site-red: #e56c69;
 
-.form-container{
+.form-container {
   background-color: $site-brown;
   color: $site-white;
 }
+
 .sign-up-form {
   border-right: solid 1px $site-white;
   padding: 20px;
