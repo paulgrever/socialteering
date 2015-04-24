@@ -1,26 +1,21 @@
 class OrganizationVerifier
-  attr_reader :verified, :data
+  attr_reader :verified, :response
 
   def initialize(ein)
     @ein = ein
     fetch_data
   end
 
-
-private
-
-  def fetch_data
-    response = Faraday.get("https://projects.propublica.org/nonprofits/api/v1/organizations/#{@ein}.json")
-    if response.status == 200
-      @data = parse_response(response)
-      @verified = true
-    else 
-      @verified = false
-    end
+  def validate_response?
+    response.status == 200
   end
 
-  def parse_response(response)
-    parsed = JSON.parse(response.body)
+  def fetch_data
+    @response = Faraday.get("https://projects.propublica.org/nonprofits/api/v1/organizations/#{@ein}.json")
+  end
+
+  def parse_response
+    parsed = JSON.parse(@response.body)
     { verified: true,
       name: parsed["organization"]["name"] ,
       address: parsed["organization"]["address"],
@@ -28,13 +23,8 @@ private
       state: parsed["organization"]["state"],
       zipcode: parsed["organization"]["zipcode"],
       careofname: parsed["organization"]["careofname"],
-      organization_type: parsed["organization"]["organization_code"],
+      organization_type: parsed["organization"]["ntee_code"][0..2],
       stein: parsed["organization"]["id"].to_s
        }
-
   end
-
-
-
-
 end

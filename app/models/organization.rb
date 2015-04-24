@@ -1,14 +1,25 @@
 class Organization < ActiveRecord::Base
-  after_create :fetch_org_data
-  
+  attr_reader :verifier
+  validates :ein, uniqueness: true
+  validates :ein, numericality: true
+  validates :ein, length: { is: 9 }
+  validate :valid_ein
+  after_create :update_organization_info
+
+  def valid_ein
+    verifier = OrganizationVerifier.new(ein)
+      if !verifier.validate_response?
+        errors.add(:invalid_ein, "Your EIN was not found.")
+     else
+      true
+     end
+
+  end
+
   private
 
-  def fetch_org_data
+  def update_organization_info
     verifier = OrganizationVerifier.new(ein)
-    if verifier.verified
-      update_attributes(verifier.data)
-    else
-      update_attribute(:verified, false)
-    end
+    update_attributes(verifier.parse_response)
   end
 end

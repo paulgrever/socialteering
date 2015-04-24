@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   #home
   root "home#index"
-  get "/business", to: "home#business"
-  get "/organization", to: "home#organization"
+  get "/business_info", to: "home#business"
+  get "/organization_info", to: "home#organization"
   get "/about", to: "home#about"
 
   #session

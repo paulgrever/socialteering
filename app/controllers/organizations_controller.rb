@@ -1,4 +1,6 @@
 class OrganizationsController < ApplicationController
+  def index
+  end
   def new
     @organization = Organization.new
   end
@@ -6,10 +8,15 @@ class OrganizationsController < ApplicationController
   def create
     @organization = Organization.new(organization_params)
     if @organization.save
-      redirect_to root_path
+      redirect_to organization_path(@organization)
     else
-      redirect_to :new
+      flash[:danger] = "We couldn't locate your EIN, please try again or fill out the request form."
+      render :new
     end
+  end
+
+  def show
+    @organization = Organization.find(params[:id])
   end
 
   private

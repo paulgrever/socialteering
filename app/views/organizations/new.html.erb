@@ -1,12 +1,26 @@
-<div class="container top top">
-  <div class= "row">
-    <%= form_for(@organization) do |f| %>
-      <div class="form-group">
-        <%= f.label "EIN"%>
-      
-        <%= f.text_field :ein, class: "form-control", placeholder: "XXXXXXXXX"%>
-        </div>
-        <%= f.submit %>
-    <% end %>
+<div class="container-fluid form-container">
+  <div class= "row top">
+    <h1 class="text-center">Become a registered Socialteering Community Organization</h1>
+    <div class="row">
+      <div class="center-text sign-in-form">
+        <%= button_to "FIND UPCOMING EVENTS", events_path, method: :get, class: "btn btn-lg btn-landing center-block"  %>
+      </div>
+    </div>
+    <div class="col-md-4 sign-up-form">
+      <h4>Quick register, simply enter your EIN.</h4>
+      <p class="notice">We accept all 501(c) organizations.</p>
+      <%= form_for(@organization) do |f| %>
+        <div class="form-group">
+          <%= f.label "EIN"%>
+        
+          <%= f.text_field :ein, class: "form-control", placeholder: "XXXXXXXXX"%>
+          </div>
+          <%= f.submit "Register my EIN", class: "btn btn-landing" %>
+      <% end %>
+    </div>
+    <div class="col-md-8 sign-up-form">
+      <h4>Request to Become A Socialteering Organization</h4>
+      <p class="notice">Add your information the old fashioned way and our team will review your request and get you registerd in no time flat.</p>
+    </div>
   </div>
 </div>
