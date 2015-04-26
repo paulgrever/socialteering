@@ -38,4 +38,13 @@ $site-red: #e56c69;
   color: $site-white;
 }
 
+.box {
+  border-top: $site-brown 1px solid;
+  padding: 20px;
+}
+
+.event-create {
+  border-left: $site-brown 1px solid;
+}
+
 

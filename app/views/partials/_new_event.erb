@@ -1,0 +1,12 @@
+<div class="col-md-12">
+  <h4>Create an event!</h4>
+  <p class="notice">We accept all 501(c) organizations.</p>
+  <%= form_for(@organization) do |f| %>
+    <div class="form-group">
+      <%= f.label "Organization Name"%>
+    
+      <%= f.text_field :name, class: "form-control", placeholder: "Official Name"%>
+      </div>
+      <%= f.submit "Register my EIN", class: "btn btn-landing" %>
+  <% end %>
+</div>
