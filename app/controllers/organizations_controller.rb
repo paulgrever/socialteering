@@ -1,5 +1,6 @@
 class OrganizationsController < ApplicationController
   def index
+    @organizations = Organization.all
   end
   
   def new
@@ -23,6 +24,6 @@ class OrganizationsController < ApplicationController
   private
 
   def organization_params
-    params.require(:organization).permit(:ein)
+    params.require(:organization).permit(:ein, :user_id)
   end
 end

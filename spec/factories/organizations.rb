@@ -1,13 +1,13 @@
 FactoryGirl.define do
   factory :organization do
-    name "MyString"
-    stein "MyString"
-    careofname "MyString"
-    address "MyString"
-    city "MyString"
-    state "MyString"
-    zipcode "MyString"
-    type ""
+    ein 142007220
+    name "PRO PUBLICA INC"
+    stein "142007220"
+    careofname "Paul"
+    address "ONE EXCHANGE PLZ 55 BROADWAY 23 FL"
+    city "NEW YORK"
+    state "NY"
+    zipcode "10006-0000"
+    organization_type "A20"
   end
-
 end

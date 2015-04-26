@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   validates :email, :provider, :uid, :token, presence: true
   validates_format_of :email, with: /@/
+  has_many :organizations
 
     
   def self.find_or_create_from_auth(auth)
