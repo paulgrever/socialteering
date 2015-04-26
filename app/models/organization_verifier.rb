@@ -17,6 +17,7 @@ class OrganizationVerifier
   def parse_response
     parsed = JSON.parse(@response.body)
     { verified: true,
+      ein: parsed["organization"]["ein"],
       name: parsed["organization"]["name"],
       address: parsed["organization"]["address"],
       city: parsed["organization"]["city"],
