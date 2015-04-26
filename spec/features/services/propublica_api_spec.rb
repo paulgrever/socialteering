@@ -1,7 +1,6 @@
 require "rails_helper"
 
 RSpec.describe OrganizationVerifier do
-
   context "organizaitons with valid ein" do
     it "finds organizations when they are in database" do
       VCR.use_cassette("organization") do
@@ -15,7 +14,7 @@ RSpec.describe OrganizationVerifier do
     end
   end
 
-  context "organizations with invalid ein" do 
+  context "organizations with invalid ein" do
     it "does find organizations when they are in database" do
       VCR.use_cassette("invalid_organization") do
         @response = OrganizationVerifier.new(999999999)

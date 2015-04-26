@@ -29,6 +29,6 @@ RSpec.configure do |config|
   VCR.configure do |config|
     config.cassette_library_dir = "spec/vcr_cassettes"
     config.hook_into :webmock
-    config.default_cassette_options = {serialize_with: :json}
+    config.default_cassette_options = { serialize_with: :json }
   end
 end
