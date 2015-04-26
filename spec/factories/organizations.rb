@@ -9,5 +9,6 @@ FactoryGirl.define do
     state "NY"
     zipcode "10006-0000"
     organization_type "A20"
+    user
   end
 end
