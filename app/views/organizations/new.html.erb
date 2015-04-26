@@ -14,6 +14,7 @@
       <p class="notice">We accept all 501(c) organizations.</p>
       <%= form_for(@organization) do |f| %>
         <div class="form-group">
+          <%= f.hidden_field :user_id, :value => current_user.id %>
           <%= f.label "EIN"%>
         
           <%= f.text_field :ein, class: "form-control", placeholder: "XXXXXXXXX"%>

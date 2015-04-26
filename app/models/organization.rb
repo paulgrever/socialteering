@@ -1,5 +1,6 @@
 class Organization < ActiveRecord::Base
   attr_reader :verifier
+  belongs_to :user
   validates :ein, uniqueness: true
   validates :ein, numericality: true
   validates :ein, length: { in: 8..9 }
