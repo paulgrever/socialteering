@@ -1,12 +1,18 @@
-<div class="col-md-12">
+<div class="col-md-12 spacer">
   <h4>Create an event!</h4>
-  <p class="notice">We accept all 501(c) organizations.</p>
-  <%= form_for(@organization) do |f| %>
+  <%= form_for(Event.new) do |f| %>
+    <%= f.hidden_field :organization_id, :value => @organization.id %>
     <div class="form-group">
-      <%= f.label "Organization Name"%>
-    
-      <%= f.text_field :name, class: "form-control", placeholder: "Official Name"%>
+      <%= f.label "Event Name"%>
+      <%= f.text_field :name, class: "form-control", placeholder: "Event Name"%>
       </div>
-      <%= f.submit "Register my EIN", class: "btn btn-landing" %>
+    <div class="form-group">
+      <%= f.label "Address"%>
+      <%= f.text_field :address, class: "form-control", placeholder: "Street addresss"%>
+      <%= f.text_field :city, class: "form-control", placeholder: "City"%>
+      <%= f.text_field :state, class: "form-control", placeholder: "State"%>
+      <%= f.text_field :zipcode, class: "form-control", placeholder: "Zipcode"%>
+    </div>
+      <%= f.submit "Create Event", class: "btn btn-landing btn-lg" %>
   <% end %>
 </div>

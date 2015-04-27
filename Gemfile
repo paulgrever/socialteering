@@ -19,6 +19,7 @@ gem "bootstrap-will_paginate"
 gem "faraday"
 gem "json"
 gem "skylight"
+gem "yelp"
 
 
 

@@ -1,4 +1,4 @@
-<div class="text-center col-md-offset-4 col-md-4 box">
+<div class="text-center col-md-offset-4 col-md-4 spacer">
   <h4>EIN: <%= @organization.ein %></h4>
   <h4>Primary Contact: <%= @organization.user.full_name %></h4>
   <%= form_for(@organization) do |f| %>
@@ -18,6 +18,6 @@
       <%= f.text_field :state, class: "form-control", placeholder: "State"%>
       <%= f.text_field :zipcode, class: "form-control", placeholder: "Zipcode"%>
     </div>
-      <%= f.submit "Update #{@organization.name.capitalize}", class: "btn btn-landing" %>
+      <%= f.submit "Update Information", class: "btn btn-landing btn-lg" %>
   <% end %>
 </div>
