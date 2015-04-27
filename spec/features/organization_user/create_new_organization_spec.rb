@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "Organization user", type: :feature do
   it "can see it's organizations on home page" do
-    VCR.use_cassette("feature_organization") do 
+    VCR.use_cassette("feature_organization") do
       visit root_path
       expect(page).to_not have_content("My Organizations")
       facebook_login

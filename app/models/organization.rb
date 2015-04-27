@@ -29,4 +29,3 @@ class Organization < ActiveRecord::Base
     update_attributes(verifier.parse_response)
   end
 end
-

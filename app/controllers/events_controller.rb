@@ -26,7 +26,7 @@ class EventsController < ApplicationController
                                   :state,
                                   :zipcode,
                                   :latitude,
-                                  :longitude, 
+                                  :longitude,
                                   :organization_id)
   end
 end

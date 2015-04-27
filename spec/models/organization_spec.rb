@@ -1,8 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Organization, type: :model do
-  # VCR.use_cassette("model_organization") do 
-    
+  # VCR.use_cassette("model_organization") do
   #     @organization = create(:organization)
   #     OrganizationVerifier.new(@organization.ein)
 

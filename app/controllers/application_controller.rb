@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
   end
 
   def current_organization
-   @current_user.organizations.any?
+    @current_user.organizations.any?
   end
 end
