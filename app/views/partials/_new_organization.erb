@@ -1,0 +1,11 @@
+<%= form_for(@organization) do |f| %>
+  <div class="form-group">
+    <% if current_user.present? %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <% end %>
+    <%= f.label "EIN"%>
+  
+    <%= f.text_field :ein, class: "form-control", placeholder: "XXXXXXXXX"%>
+    </div>
+    <%= f.submit "Register my EIN", class: "btn btn-landing" %>
+<% end %>

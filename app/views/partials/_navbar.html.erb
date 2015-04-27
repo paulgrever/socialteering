@@ -14,16 +14,26 @@
         <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
           <li><%= link_to "Volunteer", events_path %></li>
           <% if current_user.present? %>
+            <% if current_organization %>
+            <li><a href="/" data-target="#" data-toggle="dropdown">
+              My Organizations <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <% current_user.organizations.all.each do |org| %>
+              <li><%= link_to org.name, organization_path(org) %></li>
+              <% end %>
+            </ul>
+          </li>
+          <% end %>
+
           <li><%= link_to '#', id: "cart" do %>
             <span class='glyphicon glyphicon-bookmark' aria-hidden='true'><%= "Events(3)" %></span>
             <% end %></li>
             <li> <%= image_tag( current_user.image, class:"img-circle navbar-brand-image") %> <%= current_user.first_name %> </li>
+
           <% else %>
               <li><%= link_to "Sign in with Facebook", "/auth/facebook"%></li>
           <% end %>
-          
-
-          
           <li><a href="/" data-target="#" data-toggle="dropdown">
               Settings <span class="caret"></span>
             </a>

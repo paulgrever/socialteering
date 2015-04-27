@@ -7,6 +7,7 @@ class Organization < ActiveRecord::Base
   validates :ein, length: { in: 8..9 }
   validate :valid_ein
   after_create :update_organization_info
+  has_many :events
 
   def valid_ein
     verifier = OrganizationVerifier.new(ein)
@@ -15,6 +16,10 @@ class Organization < ActiveRecord::Base
     else
       true
     end
+  end
+
+  def any_events?
+    events.any?
   end
 
   private

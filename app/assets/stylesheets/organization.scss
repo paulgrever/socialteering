@@ -38,4 +38,26 @@ $site-red: #e56c69;
   color: $site-white;
 }
 
+.box {
+  border-top: $site-brown 1px solid;
+  padding: 20px;
+}
+
+.event-create {
+  border-left: $site-brown 1px solid;
+}
+
+.full-height {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.spacer {
+  padding: 20px;
+}
+
+.filler {
+  padding-bottom: 45px;
+}
+
 
