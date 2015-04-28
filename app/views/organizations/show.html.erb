@@ -32,7 +32,7 @@
       <h3>Upcoming Events</h3>
       <% if @organization.any_events?%>
       <ul class="event-list">
-          <%@organization.events.each do |event| %>
+          <%@organization.events.order(:event_date).each do |event| %>
           <%@event = event  %>
           <%= render  'partials/event_lister', locals: {event: @event} %>
           <% end %>

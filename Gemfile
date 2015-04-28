@@ -20,9 +20,8 @@ gem "faraday"
 gem "json"
 gem "skylight"
 gem "yelp"
-
-
-
+gem "geocoder"
+gem 'gmaps4rails'
 
 group :development, :test do
   gem "better_errors"
