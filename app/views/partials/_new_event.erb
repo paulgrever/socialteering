@@ -5,14 +5,27 @@
     <div class="form-group">
       <%= f.label "Event Name"%>
       <%= f.text_field :name, class: "form-control", placeholder: "Event Name"%>
-      </div>
+    </div>
     <div class="form-group">
-      <%= f.label "Address"%>
+      <%= f.label "Event Description"%>
+      <%= f.text_field :short_description, class: "form-control", placeholder: "Quick Tag Line"%>
+      <%= f.text_area :long_description, class: "form-control", placeholder: "Full Description"%>
+      <%= f.text_field :image_url, class: "form-control", placeholder: "Image URL"%>
+    </div>
+    <div class="form-group">
+      <%= f.label "Event Location"%>
       <%= f.text_field :address, class: "form-control", placeholder: "Street addresss"%>
       <%= f.text_field :city, class: "form-control", placeholder: "City"%>
       <%= f.text_field :state, class: "form-control", placeholder: "State"%>
       <%= f.text_field :zipcode, class: "form-control", placeholder: "Zipcode"%>
     </div>
+    <div class="form-group">
+      <%= f.label "Event Details"%>
+      <%= f.text_field :event_date, class: "form-control", placeholder: "Date"%>
+      <%= f.text_field :event_start, class: "form-control", placeholder: "Start Time"%>
+      <%= f.text_field :event_end, class: "form-control", placeholder: "End Time"%>
+    </div>
+    
       <%= f.submit "Create Event", class: "btn btn-landing btn-lg" %>
   <% end %>
 </div>
