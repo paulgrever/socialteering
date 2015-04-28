@@ -41,7 +41,7 @@ class OrganizationsController < ApplicationController
                                          :state,
                                          :zipcode,
                                          :phone_number,
-                                         :email, 
+                                         :email,
                                          :facebook_url,
                                          :twitter_url,
                                          :google_plus_url,
