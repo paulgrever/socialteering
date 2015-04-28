@@ -27,6 +27,9 @@ class EventsController < ApplicationController
                                   :zipcode,
                                   :latitude,
                                   :longitude,
-                                  :organization_id)
+                                  :organization_id,
+                                  :short_description,
+                                  :long_description,
+                                  :image_url)
   end
 end
