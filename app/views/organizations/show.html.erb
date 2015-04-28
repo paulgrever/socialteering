@@ -7,7 +7,9 @@
 
   <div class="row text-center">
     <div class="col-lg-2 contact-info style-links full-height">
+      <h4 class="notice full-height">About:</h4>
       <div>
+        <p><%= link_to("Website", @organization.website)%></p>
         <h4><strong><em><%= @organization.description %></em></strong></h4>
       </div>
       <h4 class="notice full-height">Contact Information:</h4>
