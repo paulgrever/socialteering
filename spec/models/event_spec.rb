@@ -1,12 +1,12 @@
 require "rails_helper"
 
 RSpec.describe Event, type: :model do
-  before(:each) do 
+  before(:each) do
     VCR.use_cassette("event") do
         @organization = create(:organization)
         @parsed_organization = OrganizationVerifier.new(@organization.ein).parse_response
     end
-    VCR.use_cassette("event_geocode") do 
+    VCR.use_cassette("event_geocode") do
       @event = create(:event, organization_id: @organization.id)
     end
   end
@@ -39,6 +39,4 @@ RSpec.describe Event, type: :model do
     @event.event_date = "1994-01-21"
     expect(@event.future?).to eq(["Please make your event in the future."])
   end
-
-
 end

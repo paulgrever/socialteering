@@ -10,15 +10,14 @@ class Event < ActiveRecord::Base
   end
 
   def location
-    [address,city,state, zipcode].to_a.compact.join(",")
+    [address, city, state, zipcode].to_a.compact.join(",")
   end
 
   def future?
-    if Date.today < event_date  
+    if Date.today < event_date
       true
     else
       errors.add(:future?, "Please make your event in the future.")
     end
-    
   end
 end
