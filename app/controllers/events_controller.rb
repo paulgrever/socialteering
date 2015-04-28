@@ -7,11 +7,14 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     if @event.save
       flash[:success] = "Your event has been created"
-      redirect_to organization_path(@event.organization_id)
+      redirect_to businesses_path
     else
       flash[:danger] = "Your event could not be created at this time"
-      render :new
+      redirect_to :back
     end
+  end
+
+  def show
   end
 
   private

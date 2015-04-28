@@ -92,8 +92,10 @@ GEM
       faraday (>= 0.7.4, < 0.10)
     figaro (1.1.0)
       thor (~> 0.14)
+    geocoder (1.2.8)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    gmaps4rails (2.1.2)
     hashie (3.4.1)
     i18n (0.7.0)
     jbuilder (2.2.13)
@@ -263,6 +265,8 @@ DEPENDENCIES
   factory_girl_rails
   faraday
   figaro
+  geocoder
+  gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
   json
