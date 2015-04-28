@@ -7,6 +7,11 @@
 
   <div class="row text-center">
     <div class="col-lg-2 contact-info style-links full-height">
+      <h4 class="notice full-height">About:</h4>
+      <div>
+        <p><%= link_to("Website", @organization.website)%></p>
+        <h4><strong><em><%= @organization.description %></em></strong></h4>
+      </div>
       <h4 class="notice full-height">Contact Information:</h4>
       <div class="full-height filler ">
         <p><em><%= link_to(@organization.address, "https://www.google.com/maps/place/#{@organization.address},+#{@organization.city},+#{@organization.state}+#{@organization.zipcode}" , target: "_blank") %></em></p>
@@ -17,15 +22,21 @@
         <% else %>
           <p><em><%= mail_to @organization.email, @organization.email %></li></em></p>
         <% end %>
-           <p><em><%=@organization.phone_number%></em></p>
+           <p><em><%=@organization.phone_number%></em></p><h4 class="notice full-height">Social Information:</h4>
+           <p><%= link_to("Facebook", @organization.facebook_url)  %> </p>
+           <p><%= link_to("Twitter", @organization.twitter_url)%></p>
+            <p><%= link_to("Google Plus", @organization.google_plus_url)%></p>
       </div>
     </div>
     <div class="col-md-6">
       <h3>Upcoming Events</h3>
       <% if @organization.any_events?%>
+      <ul class="event-list">
           <%@organization.events.each do |event| %>
-          <li><%=event.name  %> </li>
+          <%@event = event  %>
+          <%= render  'partials/event_lister', locals: {event: @event} %>
           <% end %>
+          </ul>
       <% else %>
         <h4>Get started by planning your first event! Fill out the form to the right!</h4>
       <% end %>
@@ -45,6 +56,8 @@
     <% end %>
   <% end %>
   <div id="toggler">
-    <%= render "partials/organization_update" %>
+    <div class="container-fluid">
+      <%= render "partials/organization_update" %>
+    </div>
   </div>
 </div>

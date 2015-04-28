@@ -1,0 +1,27 @@
+
+            <li>
+              <time datetime=<%=@event.created_at.strftime("%Y-%m-%d")%>>
+                <span class="day">20</span>
+                <span class="month">Mar</span>
+                <span class="year">2015</span>
+                <span class="time">2pm-5pm</span>
+              </time>
+              <%=image_tag "event-landscaping.png"  %>
+              <div class="info">
+                <h2 class="title"><%= @event.name %> </h2>
+                <div>
+                  <p class="desc hide-away">Spend time helping bring union station back to it's glory days. Then head down the track to Sixth Engine for special happy hour.</p>
+                </div>
+                  <ul>
+                  <li class="org-biz-width"><a  class: "hide-away" href=<%=@event.organization.website%>><span class="glyphicon glyphicon-tree-deciduous"></span>Organization Site</a></li>
+                   <li class="org-biz-width"a href="http://www.sixthengine.com"/><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> Social Site</a></li>
+                </ul>
+              </div>
+              <div class="social">
+                <ul>
+                  <li class="facebook lister-width"><a href=<%=@event.organization.facebook_url %>><span class="fa fa-facebook"></span></a></li>
+                  <li class="twitter lister-width-1"><a href=<%=@event.organization.twitter_url  %>><span class="fa fa-twitter"></span></a></li>
+                  <li class="google-plus lister-width"><a href=<%=@event.organization.google_plus_url  %>><span class="fa fa-google-plus"></span></a></li>
+                </ul>
+              </div>
+            </li>
