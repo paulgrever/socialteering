@@ -1,8 +1,8 @@
 
             <li>
               <time datetime=<%=@event.created_at.strftime("%Y-%m-%d")%>>
-                <span class="day">20</span>
-                <span class="month">Mar</span>
+                <span class="day"><%=@event.event_date.day  %></span>
+                <span class="month"><%=@event.month%></span>
                 <span class="year">2015</span>
                 <span class="time">2pm-5pm</span>
               </time>
