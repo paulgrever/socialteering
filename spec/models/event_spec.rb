@@ -37,7 +37,7 @@ RSpec.describe Event, type: :model do
 
   it "is invalid if events are in the past" do
     @event.event_date = "1994-01-21"
-    expect(@event.future?).to eq(false)
+    expect(@event.future?).to eq(["Please make your event in the future."])
   end
 
 

@@ -10,7 +10,7 @@ class EventsController < ApplicationController
       redirect_to businesses_path
     else
       flash[:danger] = "Your event could not be created at this time"
-      render :new
+      redirect_to :back
     end
   end
 

@@ -14,6 +14,11 @@ class Event < ActiveRecord::Base
   end
 
   def future?
-    Date.today < event_date  
+    if Date.today < event_date  
+      true
+    else
+      errors.add(:future?, "Please make your event in the future.")
+    end
+    
   end
 end
