@@ -20,10 +20,14 @@
       <%= f.text_field :zipcode,  required: true, class: "form-control", placeholder: "Zipcode"%>
     </div>
     <div class="form-group">
-      <%= f.label "Event Details"%>
-      <%= f.text_field :event_date, required: true, class: "form-control", placeholder: "Date"%>
-      <%= f.text_field :event_start, required: true,class: "form-control", placeholder: "Start Time"%>
-      <%= f.text_field :event_end,required: true, class: "form-control", placeholder: "End Time"%>
+      <div>
+        <%= f.label "Event Details"%>
+      </div>
+      <div>
+        <%= f.date_select :event_date, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: DateTime.now.year, required: true, class: "form-control"%>
+      </div>
+      <%= f.time_select :event_start, required: true,class: "form-control", prompt: { hour: 'Select Start Hour', minute: 'Select Start Minute'}, placeholder: "Start Time"%>
+      <%= f.time_select :event_end, required: true,class: "form-control", prompt: { hour: 'Select End Hour', minute: 'Select End Minute'}, placeholder: "End Time"%>
     </div>
     
       <%= f.submit "Create Event", class: "btn btn-landing btn-lg" %>
