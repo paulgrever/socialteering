@@ -22,6 +22,7 @@ gem "skylight"
 gem "yelp"
 gem "geocoder"
 gem 'gmaps4rails'
+gem 'bootstrap-datepicker-rails'
 
 group :development, :test do
   gem "better_errors"
