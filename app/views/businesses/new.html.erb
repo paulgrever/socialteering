@@ -1,21 +1,103 @@
-<div class="top">
-  <h1>Add filters for your ideal business</h1>
-</div>
-
-<div>
-
-  <%= form_tag(event_businesses_path, method: :get )do  %>
-  <%= label_tag "event key search" %>
-  <%= text_field_tag "event[term]" %>
-  <%= label_tag "search radius in meters" %>
-  <%= number_field_tag "event[distance]", 1000, min: 200, max: 3000 %>
-  <%#= text_field_tag "event[distance]" %>
-  <%= label_tag "search type" %>
-  <%= select_tag("event[sort_type]", options_for_select([['Best Search Result', 0], ['Distance', 1],["Yelp Review", 2] ]))%>
+<div class="container-fluid">
+  <div class="top text-center spacer">
+    <h1><span class='notice'>Socialize</span> <%= @event.name %></h1>
+  </div>
 
 
-  <%= submit_tag "Create" %>
-  <% end %>
-     
+  <div class="row full-view ">
+    <div class="col-md-6 well" id="stylize">
+      <h2 class="text-center ">Social Inspiration from Past Events</h2>
+      <div class="row text-center">
+        <div class="col-sm-5">
+          <p> <strong class="notice">Volunteer</strong> </p>
+          <p><span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span> Tree planting and clean up at Meridian Hill Park.</p>
+        </div>
+        <div class="col-sm-2">
+          <br>
+          <br>
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          
+        </div>
+        <div class="col-sm-5">
+          <p> <strong class="notice">Socialize</strong> </p>
+          <p><span class="glyphicon glyphicon-ice-lolly-tasted" aria-hidden="true"></span> Followed by a popsicle tasting at Pleasant Pops.</p>
+        </div>
+      </div>
+      <div class="row text-center top-border">
+        <div class="col-sm-5">
+          <p> <strong class="notice">Volunteer</strong> </p>
+          <p><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Performing routine chores in the homes of elderly with BETA.</p>
+        </div>
+        <div class="col-sm-2">
+          <br>
+          <br>
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          
+        </div>
+        <div class="col-sm-5">
+          <p> <strong class="notice">Socialize</strong> </p>
+          <p><span class="glyphicon glyphicon-film" aria-hidden="true"></span> An advanced movie screening of Bucket List at AMC theaters.</p>
+        </div>
+      </div>
+      <div class="row text-center top-border">
+        <div class="col-sm-5">
+          <p> <strong class="notice">Volunteer</strong> </p>
+          <p><span class="glyphicon glyphicon-erase" aria-hidden="true"></span> Graffiti clean up at Madison East Highschool</p>
+        </div>
+        <div class="col-sm-2">
+          <br>
+          <br>
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </div>
+        <div class="col-sm-5">
+          <p> <strong class="notice">Socialize</strong> </p>
+          <p><span class="glyphicon glyphicon-glass" aria-hidden="true"></span> Special Happy Hour at Tip Top Tavern</p>
+        </div>
+      </div>
+      <div class="row text-center top-border">
+        <div class="col-sm-5">
+          <p> <strong class="notice">Volunteer</strong> </p>
+          <p><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> Gift wrapping presents for Toys for Tots on the 16th Mall. </p>
+        </div>
+        <div class="col-sm-2">
+          <br>
+          <br>
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </div>
+        <div class="col-sm-5">
+          <p> <strong class="notice">Socialize</strong> </p>
+          <p><span class="glyphicon glyphicon-book" aria-hidden="true"></span> A book signing at Tattered Cover Book Store</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 ">
+      <h3 class="text-center"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Find the perfect local business for <%= @event.name %></h3>
+      <p class="text-center">Search powered by: <%= image_tag("yelp_logo.png") %> </p>
+      <%= form_tag(event_businesses_path, method: :get ) do  %>
+        <div class="form-group full-height">
+          <%= label_tag "event key search" %>
+          <%= text_field_tag( "event[term]", nil,  class: "form-control")%>
+        </div>
+        <div class="form-group full-height">
+          <%= label_tag "search radius in meters" %>
+          <%= number_field_tag( "event[distance]", 1000, min: 200, max: 3000, class: "form-control")%>
+        </div>
+        <%= label_tag "search by:" %>
+          <div class="form-group ">
+           <%= select_tag("event[sort_type]", options_for_select([['Best Search Result', 0], ['Distance', 1],["Yelp Review", 2] ]))%>
+          </div>
+        <div class="text-center full-height" >
+          <%= submit_tag("Find Local Busineses", class: "btn btn-landing btn-lg")%>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
+  <div class="row text-center">
+    <div class="col-md-12">
+       <em><h4>Your volunteers have worked hard! Now it's time to reward them with some fun. Find a <span class="notice"> local business</span> near to where your volunteers worked so hard.</h4></em>
+
+      <em><h4>This is your chance to get to know your volunteers and convert them to long term <span class="notice"> volunteers </span>or <span class="notice">donors! </span> </h4></em>
+    </div>
+  </div>
 </div>

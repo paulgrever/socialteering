@@ -46,6 +46,7 @@ body {
 .btn-landing {
   color: $site-white;
   background-color: $site-orange;
+  padding-bottom: 10px;
 }
 
 .point {
@@ -96,6 +97,11 @@ body {
 
 .email-form {
   border-top: 1px $site-white solid;
+}
+
+.top-border {
+  border-top: 1px $site-white solid;
+  padding-top: 10px;
 }
 
 
