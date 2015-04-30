@@ -19,7 +19,7 @@ gem "bootstrap-will_paginate"
 gem "faraday"
 gem "json"
 gem "skylight"
-gem "yelp"
+gem "yelp", require: "yelp"
 gem "geocoder"
 gem 'gmaps4rails'
 
