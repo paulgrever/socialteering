@@ -1,8 +1,8 @@
 require 'yelp'
+
 class YelpService
 
   attr_reader :client
-
 
   def city_search(city)
     client.search(city)
@@ -16,12 +16,12 @@ class YelpService
     coordinates_hash = { latitude: coordinates[0], longitude: coordinates[1] }
     client.search_by_coordinates(coordinates_hash, term: search_terms, radius_filter: radius, sort: sort)
   end
-  
+
   def client
     @client = Yelp::Client.new({ consumer_key: ENV['yelp_consumer_key'],
-                        consumer_secret: ENV['yelp_consumer_secret'],
-                        token: ENV['yelp_token'],
-                        token_secret: ENV['yelp_token_secret']
-                      })
+                                 consumer_secret: ENV['yelp_consumer_secret'],
+                                 token: ENV['yelp_token'],
+                                 token_secret: ENV['yelp_token_secret']
+                                })
   end
 end
