@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # events
   # organizations
   resources :organizations, except: [:destroy]
-  resources :events do 
+  resources :events do
     resources :businesses
   end
 end

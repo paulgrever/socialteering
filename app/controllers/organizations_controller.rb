@@ -22,7 +22,6 @@ class OrganizationsController < ApplicationController
   end
 
   def update
-    binding.pry
     @organization = Organization.find(params[:id])
     if @organization.update(organization_params)
       flash[:success] = "Your information has been updated"
