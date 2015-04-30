@@ -1,5 +1,4 @@
 class YelpService
-
   attr_reader :client
 
   def city_search(city)
@@ -11,8 +10,12 @@ class YelpService
   end
 
   def radius_search(coordinates, search_terms, radius = 1000, sort = 0)
-    coordinates_hash = { latitude: coordinates[0], longitude: coordinates[1] }
-    client.search_by_coordinates(coordinates_hash, term: search_terms, radius_filter: radius, sort: sort)
+    coordinates_hash = { latitude: coordinates[0],
+                         longitude: coordinates[1] }
+    client.search_by_coordinates(coordinates_hash,
+                                 term: search_terms, 
+                                 radius_filter: radius, 
+                                 sort: sort)
   end
 
   def client
