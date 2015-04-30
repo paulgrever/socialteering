@@ -22,6 +22,7 @@ class OrganizationsController < ApplicationController
   end
 
   def update
+    binding.pry
     @organization = Organization.find(params[:id])
     if @organization.update(organization_params)
       flash[:success] = "Your information has been updated"
@@ -44,6 +45,7 @@ class OrganizationsController < ApplicationController
                                          :email,
                                          :facebook_url,
                                          :twitter_url,
+                                         :website,
                                          :google_plus_url,
                                          :description)
   end

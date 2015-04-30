@@ -1,0 +1,21 @@
+<div class="top">
+  <h1>Add filters for your ideal business</h1>
+</div>
+
+<div>
+
+  <%= form_tag(event_businesses_path, method: :get )do  %>
+  <%= label_tag "event key search" %>
+  <%= text_field_tag "event[term]" %>
+  <%= label_tag "search radius in meters" %>
+  <%= number_field_tag "event[distance]", 1000, min: 200, max: 3000 %>
+  <%#= text_field_tag "event[distance]" %>
+  <%= label_tag "search type" %>
+  <%= select_tag("event[sort_type]", options_for_select([['Best Search Result', 0], ['Distance', 1],["Yelp Review", 2] ]))%>
+
+
+  <%= submit_tag "Create" %>
+  <% end %>
+     
+
+</div>

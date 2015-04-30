@@ -1,18 +1,30 @@
 <div class="top">
   <h1>Business Index Page</h1>
 </div>
-<div>
-  <ul>
-  <% @businesses.each do |business| %>
-    <li>
-      <%= link_to business.name, business.url %> (<%= business.distance.round %> meters)
-      <%= business.display_phone%>
-      <p><%= business.snippet_text %></p>
-      <img src="<%= business.image_url %>" />
-      <img src="<%= business.snippet_image_url %>" />
-      <img src="<%= business.rating_img_url_large %>" />
-      <img src="<%= business.rating_img_url_small %>" />
-    </li>
+<div class="container">
+  <% if @businesses.count == 0  %>
+      <div>
+        <h1 class="notice">Your search did not produce any results, please refine and search again</h1>
+
+      </div>
+      <div class="text-center">
+        <%= link_to "Search Again", :back, class: "btn btn-lg btn-landing" %>
+      </div>
+  <% else %>
+    <div>
+      <ul>
+      <% @businesses.each do |business| %>
+        <li>
+          <%= link_to business.name, business.url %> (<%= business.distance.round %> meters)
+          <%= business.display_phone%>
+          <p><%= business.snippet_text %></p>
+          <img src="<%= business.image_url %>" />
+          <img src="<%= business.snippet_image_url %>" />
+          <img src="<%= business.rating_img_url_large %>" />
+          <img src="<%= business.rating_img_url_small %>" />
+        </li>
+      <% end %>
+      </ul>
+    </div> 
   <% end %>
-  </ul>
 </div>
