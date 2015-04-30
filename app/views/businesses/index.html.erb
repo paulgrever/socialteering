@@ -6,7 +6,7 @@
 <% @businesses.each do |business| %>
   <li>
     <%= link_to business.name, business.url %> (<%= business.distance %> meters)
-    <%= business.display_phone %>
+    <%#= business.display_phone %>
     <p><%= business.snippet_text %></p>
     <img src="<%= business.image_url %>" />
     <img src="<%= business.snippet_image_url %>" />
