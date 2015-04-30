@@ -1,6 +1,7 @@
 class Organization < ActiveRecord::Base
   attr_reader :verifier
   belongs_to :user
+  validates_length_of :organization_type, maximum: 5, allow_blank: true
   validates :user_id, presence: true
   validates :ein, uniqueness: true
   validates :ein, numericality: true

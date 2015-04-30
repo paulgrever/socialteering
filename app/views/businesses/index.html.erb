@@ -1,17 +1,18 @@
 <div class="top">
   <h1>Business Index Page</h1>
 </div>
-
-<ul>
-<% @businesses.each do |business| %>
-  <li>
-    <%= link_to business.name, business.url %> (<%= business.distance %> meters)
-    <%#= business.display_phone %>
-    <p><%= business.snippet_text %></p>
-    <img src="<%= business.image_url %>" />
-    <img src="<%= business.snippet_image_url %>" />
-    <img src="<%= business.rating_img_url_large %>" />
-    <img src="<%= business.rating_img_url_small %>" />
-  </li>
-<% end %>
-</ul>
+<div>
+  <ul>
+  <% @businesses.each do |business| %>
+    <li>
+      <%= link_to business.name, business.url %> (<%= business.distance.round %> meters)
+      <%= business.display_phone%>
+      <p><%= business.snippet_text %></p>
+      <img src="<%= business.image_url %>" />
+      <img src="<%= business.snippet_image_url %>" />
+      <img src="<%= business.rating_img_url_large %>" />
+      <img src="<%= business.rating_img_url_small %>" />
+    </li>
+  <% end %>
+  </ul>
+</div>
