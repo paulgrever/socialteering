@@ -16,11 +16,11 @@ RSpec.describe Event, type: :model do
   end
 
   it "has longitude from address" do
-    expect(@event.longitude).to eq(-105.0001058)
+    expect(@event.longitude).to eq(-104.999969)
   end
 
   it "has latitude from address" do
-    expect(@event.latitude).to eq(39.7496354)
+    expect(@event.latitude).to eq(39.749572)
   end
 
   it "can translate to latitude and longitude" do
