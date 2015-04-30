@@ -44,6 +44,7 @@ class OrganizationsController < ApplicationController
                                          :email,
                                          :facebook_url,
                                          :twitter_url,
+                                         :website,
                                          :google_plus_url,
                                          :description)
   end
