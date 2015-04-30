@@ -24,7 +24,7 @@ class OrganizationVerifier
       state: parsed["organization"]["state"],
       zipcode: parsed["organization"]["zipcode"],
       careofname: parsed["organization"]["careofname"],
-      organization_type: parsed["organization"]["ntee_code"][0..2],
+      organization_type: parsed["organization"]["ntee_code"],
       stein: parsed["organization"]["id"].to_s
        }
   end
