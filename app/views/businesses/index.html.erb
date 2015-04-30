@@ -37,12 +37,18 @@
                   </li>
                 </ul>
               </div>
+              <%= binding.pry %>
+              <div class="social">
+                <%= button_to "Select Business", event_businesses_path(@event,
+                                                                       business_name: business.name
+                                                                       ) %>
+              </div>
             </li>
         <% end %>
         </ul>
+
       </div> 
-      <div class="social">
-      </div>
+
     <% end %>
   </div>
 
