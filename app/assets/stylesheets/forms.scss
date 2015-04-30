@@ -24,3 +24,17 @@ $site-red: #e56c69;
   border-right: solid 1px $site-white;
   padding: 20px;
 }
+
+.full-view {
+  height: 60vh;
+}
+
+.divider {
+  border-right: solid 1px $site-brown;
+}
+
+#stylize {
+  background-color: $site-brown;
+  color: $site-white
+}
+
