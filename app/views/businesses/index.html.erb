@@ -12,9 +12,9 @@
       <div class="col-lg-9">
         <ul class="event-list">
         <% @businesses.each do |business| %>
-      
-        <li>
-          <%=image_tag  business.image_url %>
+        <li>    
+          <%=image_tag  (business.raw_data["image_url"] || business.raw_data["image_url"] = "socialteering_placeholder.png") %>
+          
 
           <div class="info">
                 <h2 class="title"><%= link_to business.name, business.url %> (<%= business.distance.round %> meters away)</h2>
@@ -22,33 +22,37 @@
                   <ul>
                   <li class="org-biz-width">
                     <a href="tel:<%#=business.phone_view %>"<span class="glyphicon"></span>
-                      <% if business.respond_to?(:display_phone)  %>
-                        <%= business.display_phone %>
-                        <% else %>
-                          <p>Phone number is not provided</p>
-                        <% end %>
+     
+                        <%= business.raw_data["display_phone"] || business.raw_data["display_phone"]%>
+
                       </a>
                   </li>
                   <li class="org-biz-width">
                     <p>
-                    <%= link_to (image_tag "yelp_logo.png"), business.url   %> 
-                    <%= link_to (  image_tag business.rating_img_url_small), business.url   %>
+                    <%= link_to (image_tag "yelp_logo.png"), business.url %> 
+                    <%= link_to (  image_tag business.rating_img_url_small), business.url %>
                     </p>
                   </li>
                 </ul>
               </div>
-              <%= binding.pry %>
               <div class="social">
-                <%= button_to "Select Business", event_businesses_path(@event,
-                                                                       business_name: business.name
-                                                                       ) %>
+                <%= link_to("Select Business",
+                            event_businesses_path("business[name]" => business.name, 
+                                                  "business[distance]" => business.distance,
+                                                  "business[url]" => business.url,
+                                                  "business[address]" => business.location.address,
+                                                  "business[latitude]" => business.location.coordinate.latitude,
+                                                  "business[longitude]" => business.location.coordinate.longitude,
+                                                  "business[phone]" => business.raw_data['phone'],
+                                                  "business[display_phone]" => business.raw_data['display_phone'],
+                                                  "business[image_url]" => business.raw_data['image_url']),
+                            method: :post
+                          ) %>
               </div>
             </li>
         <% end %>
         </ul>
-
       </div> 
-
     <% end %>
   </div>
 

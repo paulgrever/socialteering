@@ -1,19 +1,11 @@
-class BusinessPresenter
-  extend Forwardable
+module BusinessPresenter
 
-  attr_reader :business
-
-  def initialize(business)
-    @business = business
+  def display_phone
+    self.raw_data['display_phone'] || self.raw_data['display_phone'] = "No Number Provided"
   end
 
-  def phone_view
-    if @business.respond_to?(:display_phone)
-      display_phone
-    elsif @business.respond_to?(:phone)
-      phone
-    else
-      "Phone number is not provided"
-    end
+  def image_url
+    self.raw_data['image_url'] || self.raw_data['image_url'] = "socialteering_placeholder.png"
   end
+
 end

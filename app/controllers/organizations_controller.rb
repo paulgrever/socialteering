@@ -25,7 +25,10 @@ class OrganizationsController < ApplicationController
     @organization = Organization.find(params[:id])
     if @organization.update(organization_params)
       flash[:success] = "Your information has been updated"
-      render :show
+      # render :show
+    else 
+      flash[:danger] = "Your information was not updated"
+      
     end
   end
 
