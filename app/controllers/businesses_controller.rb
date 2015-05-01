@@ -1,7 +1,6 @@
 class BusinessesController < ApplicationController
   def index
     @event = Event.find(params[:event_id])
-    binding.pry
     coordinates = [@event.latitude, @event.longitude]
     @businesses = Business.event_search(coordinates,
                                         params[:event][:term],
@@ -29,8 +28,7 @@ class BusinessesController < ApplicationController
     else
       flash[:danger] = "This business could not be selected"
       render :back
-
-    end  
+    end
   end
 
   private

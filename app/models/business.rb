@@ -1,5 +1,4 @@
 class Business < ActiveRecord::Base
-
   def self.service
     @service ||= YelpService.new
   end
