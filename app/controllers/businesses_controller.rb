@@ -1,6 +1,7 @@
 class BusinessesController < ApplicationController
   def index
     @event = Event.find(params[:event_id])
+    binding.pry
     coordinates = [@event.latitude, @event.longitude]
     @businesses = Business.event_search(coordinates,
                                         params[:event][:term],
@@ -36,13 +37,13 @@ class BusinessesController < ApplicationController
 
   def business_params
     params.require(:business).permit(:name,
-                                      :distance,
-                                      :url,
-                                      :address,
-                                      :latitude,
-                                      :longitude,
-                                      :phone,
-                                      :display_phone,
-                                      :image_url)
+                                     :distance,
+                                     :url,
+                                     :address,
+                                     :latitude,
+                                     :longitude,
+                                     :phone,
+                                     :display_phone,
+                                     :image_url)
   end
 end
