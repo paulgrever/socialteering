@@ -25,7 +25,7 @@ class BusinessesController < ApplicationController
                              display_phone: params[:business][:display_phone],
                              image_url: params[:business][:image_url])
     if @business.save
-      @event.update_attribute(business_id: @business.id)
+      @event.update_attributes(business_id: @business.id)
       redirect_to organization_path(@event.organization_id)
     else
       flash[:danger] = "This business could not be selected"

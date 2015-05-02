@@ -4,6 +4,7 @@ class Event < ActiveRecord::Base
   after_validation :geocode
   validate :future?
   belongs_to :organization
+  belongs_to :business
 
   def month
     event_date.strftime("%B")[0..2]

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150430230706) do
+ActiveRecord::Schema.define(version: 20150502201844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20150430230706) do
     t.string   "short_description"
     t.text     "long_description"
     t.string   "image_url",         default: "socialteering_placeholder.png"
+    t.integer  "business_id"
   end
 
   create_table "organizations", force: :cascade do |t|
