@@ -20,4 +20,11 @@ class Event < ActiveRecord::Base
       errors.add(:future?, "Please make your event in the future.")
     end
   end
+
+  def latitude_and_longitude?
+    if latitude.nil? && longitude.nil?
+      proximity = Geocoder.coordinates(city)
+      update_attributes(latitude: proximity[0], longitude: proximity[1])
+    end
+  end
 end

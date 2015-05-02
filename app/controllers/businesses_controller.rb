@@ -1,6 +1,7 @@
 class BusinessesController < ApplicationController
   def index
     @event = Event.find(params[:event_id])
+    @event.latitude_and_longitude?
     coordinates = [@event.latitude, @event.longitude]
     @businesses = Business.event_search(coordinates,
                                         params[:event][:term],
@@ -24,6 +25,7 @@ class BusinessesController < ApplicationController
                              display_phone: params[:business][:display_phone],
                              image_url: params[:business][:image_url])
     if @business.save
+      @event.update_attribute(business_id: @business.id)
       redirect_to organization_path(@event.organization_id)
     else
       flash[:danger] = "This business could not be selected"
