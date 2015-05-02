@@ -2,7 +2,7 @@ class OrganizationsController < ApplicationController
   def index
     @organizations = Organization.all
   end
-  
+
   def new
     @organization = Organization.new
   end
@@ -26,6 +26,9 @@ class OrganizationsController < ApplicationController
     if @organization.update(organization_params)
       flash[:success] = "Your information has been updated"
       render :show
+    else
+      flash[:danger] = "Your information was not updated"
+      
     end
   end
 

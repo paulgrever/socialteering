@@ -73,23 +73,7 @@
     <div class="col-md-6 ">
       <h3 class="text-center"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Find the perfect local business for <%= @event.name %></h3>
       <p class="text-center">Search powered by: <%= image_tag("yelp_logo.png") %> </p>
-      <%= form_tag(event_businesses_path, method: :get ) do  %>
-        <div class="form-group full-height">
-          <%= label_tag "event key search" %>
-          <%= text_field_tag( "event[term]", nil,  class: "form-control")%>
-        </div>
-        <div class="form-group full-height">
-          <%= label_tag "search radius in meters" %>
-          <%= number_field_tag( "event[distance]", 1000, min: 200, max: 3000, class: "form-control")%>
-        </div>
-        <%= label_tag "search by:" %>
-          <div class="form-group ">
-           <%= select_tag("event[sort_type]", options_for_select([['Best Search Result', 0], ['Distance', 1],["Yelp Review", 2] ]))%>
-          </div>
-        <div class="text-center full-height" >
-          <%= submit_tag("Find Local Busineses", class: "btn btn-landing btn-lg")%>
-        </div>
-      <% end %>
+      <%= render "partials/search_business" %>
     </div>
   </div>
 

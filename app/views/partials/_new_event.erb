@@ -24,7 +24,7 @@
         <%= f.label "Event Details"%>
       </div>
       <div>
-        <%= f.date_select :event_date, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: DateTime.now.year, required: true, class: "form-control"%>
+        <%= f.date_select :event_date, prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: DateTime.now.year, required: true, class: "form-control selectpicker"%>
       </div>
       <%= f.time_select :event_start, required: true,class: "form-control", prompt: { hour: 'Select Start Hour', minute: 'Select Start Minute'}, placeholder: "Start Time"%>
       <%= f.time_select :event_end, required: true,class: "form-control", prompt: { hour: 'Select End Hour', minute: 'Select End Minute'}, placeholder: "End Time"%>
