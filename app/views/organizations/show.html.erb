@@ -2,6 +2,10 @@
   <div class="row contact-info spacer">
     <div class="text-center">
       <h1 class="notice"><%= @organization.name %></h1>
+      <h4><%=@organization.description %> </h4>
+    </div>
+    <div class="style-links center-text">
+      <p><em><%= link_to("#{@organization.address}, #{@organization.city} #{@organization.state}, #{@organization.zipcode} ", "https://www.google.com/maps/place/#{@organization.address},+#{@organization.city},+#{@organization.state}+#{@organization.zipcode}" , target: "_blank") %></em></p>
     </div>
   </div>
 
@@ -46,15 +50,17 @@
       <%= render "partials/new_event" %>
     </div>
   </div>
-  <% if current_user.present? %>
-    <% if current_user.id == @organization.user_id %>
-      <div class="row box">
-        <div class="text-center">
-          <div class="btn btn-lg btn-landing center-text " id="toggler-btn"> Update <%= @organization.name %></div>
+  <div>
+    <% if current_user.present? %>
+      <% if current_user.id == @organization.user_id %>
+        <div class="row box">
+          <div class="text-center">
+            <div class="btn btn-lg btn-landing center-text " id="toggler-btn"> Update <%= @organization.name %></div>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
   <div id="toggler">
     <div class="container-fluid">
       <%= render "partials/organization_update" %>

@@ -21,7 +21,8 @@ gem "json"
 gem "skylight"
 gem "yelp", require: "yelp"
 gem "geocoder"
-gem 'gmaps4rails'
+gem "gmaps4rails"
+gem "faker"
 
 group :development, :test do
   gem "better_errors"
