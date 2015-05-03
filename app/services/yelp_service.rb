@@ -5,10 +5,6 @@ class YelpService
     client.search(city)
   end
 
-  def box_search(box, params)
-    client.search_by_bounding_box(box, params)
-  end
-
   def radius_search(coordinates, search_terms, radius = 1000, sort = 0)
     coordinates_hash = { latitude: coordinates[0],
                          longitude: coordinates[1] }
