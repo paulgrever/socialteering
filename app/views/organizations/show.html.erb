@@ -4,7 +4,7 @@
       <h1 class="notice"><%= @organization.name %></h1>
       <h4><%=@organization.description %> </h4>
     </div>
-    <div class="style-links center-text">
+    <div class="style-links text-center">
       <p><em><%= link_to("#{@organization.address}, #{@organization.city} #{@organization.state}, #{@organization.zipcode} ", "https://www.google.com/maps/place/#{@organization.address},+#{@organization.city},+#{@organization.state}+#{@organization.zipcode}" , target: "_blank") %></em></p>
     </div>
   </div>
