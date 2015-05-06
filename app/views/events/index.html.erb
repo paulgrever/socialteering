@@ -1,21 +1,19 @@
-<div class="hero-unit3">
 <div class="container">
   <div class="jumbotron">
-    <h1 class="text-center">Volunteer Events</h1>
+    <h1 class="text-center notice">Volunteer Events</h1>
     <p class="text-center">Find upcoming volunteer events in your neighborhood</p>
   </div>
 </div>
 
 <div class="container-fluid hero-unit3">
-      <div class="row">
-        <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
-          <ul class="event-list">
-            <% @events.each do |event| %>
-              <% @event = event %>
-              <%= render  'partials/event_lister', locals: {event: @event} %>
-            <% end %>
-
-          </ul>
-        </div>
+    <div class="row">
+      <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+        <ul class="event-list">
+          <% @events.each do |event| %>
+            <% @event = event %>
+            <%= render  'partials/event_lister', locals: {event: @event} %>
+          <% end %>
+        </ul>
       </div>
+    </div>
 </div>
