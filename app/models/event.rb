@@ -26,7 +26,7 @@ class Event < ActiveRecord::Base
   end
 
   def date_view
-    event_date.strftime("%A, %B%e, %Y") 
+    event_date.strftime("%A, %B%e, %Y")
   end
 
   def start_time
