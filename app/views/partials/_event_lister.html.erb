@@ -16,9 +16,11 @@
                   <li class="org-biz-width">
                     <a class: "hide-away" href=<%=@event.organization.website%>><span class="glyphicon glyphicon-tree-deciduous"></span>Organization Site</a>
                   </li>
+                  <%unless @event.business_id.nil? %>
                    <li class="org-biz-width"> 
                       <a href=<%= @event.business.url %>><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> <%= @event.business.name %></a>
                   </li>
+                  <% end %>
                 </ul>
               </div>
               <div class="social">
