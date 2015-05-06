@@ -12,7 +12,7 @@ class Seed
                 phone_number: "6082392471",
                 provider: "facebook",
                 uid: "10100954511707755" ,
-                token: "CAAI5IzLpg9sBAP3bX40Ys45FvdhThJyPMU53l9qnoNNQWssXb5m0DsBDoulYB0rmCDNMZBWjna4HMmmmb005YxpYZAt2jFjDB5JZAImvaTLUhOpVuSVfS5tbbadQ3nkbZAR7nJJjtxZAiV57y1uZAgRrhrGQSZA9GlbvA1vSHA6Pv9QX8uFL5cEvNzqxZACqcwBSqS8BUZApnIpSkQzZCbDTG7" ,
+                token: "CAAI5IzLpg9sBAP3bX40Ys45FvdhThJyPMU53l9qnoNNQWssXb5m0DsBDoulYB0rmCDNMZBWjna4HMmmmb005YxpYZAt2jFjDB5JZAImvaTLUhOpVuSVfS5tbbadQ3nkbZAR7nJJjtxZAiV57y1uZAgRrhrGQSZA9GlbvA1vSHA6Pv9QX8uFL5cEvNzqxZACqcwBSqS8BUZApnIpSkQzZCbDTG7",
                 image: "http://graph.facebook.com/10100954511707755/picture" ,
                 full_name: "Paul Grever",
                 location: "Denver")
@@ -45,7 +45,7 @@ class Seed
                                       We strongly believe that with highly specialized leadership training, these athletes can 
                                       develop into more complete and effective leaders",
                         email: "admin@scleadershipacademy.org",
-                        phone_number:  "410.924.8691",
+                        phone_number: "410.924.8691",
                         google_plus_url: "https://www.youtube.com/user/SportsChallenge1")
     
     Organization.create(ein: 10663760,
@@ -53,11 +53,11 @@ class Seed
                         user_id: paul.id,
                         facebook_url: "https://www.facebook.com/RMSplash",
                         twitter_url: "https://flowh.com/#!/rmsplash",
-                        description: "We are a nationally competitive Synchronized Swim team based in Denver, Colorado. 
-                                      We are currently the highest ranked team in Colorado with 40 swimmers ranging in 
+                        description: "We are a nationally competitive Synchronized Swim team based in Denver, Colorado.
+                                      We are currently the highest ranked team in Colorado with 40 swimmers ranging in
                                       age from 6 to 18, and a staff of 10 coaches",
                         email: "rmsplash@gmail.com",
-                        phone_number:  "410.924.8691",
+                        phone_number: "410.924.8691",
                         google_plus_url: "https://www.youtube.com/user/SportsChallenge1")
     Organization.create(ein: 203533527,
                         name: "Grow Haus",
@@ -65,13 +65,14 @@ class Seed
                         user_id: paul.id,
                         facebook_url: "http://www.facebook.com/thegrowhaus",
                         twitter_url: "https://twitter.com/TheGrowHaus",
-                        description: "The GrowHaus is a nonprofit indoor farm in Denver's Elyria-Swansea neighborhood. 
-                        Our vision is to catalyze a neighborhood-based food system in our community that is healthy, equitable, 
+                        description: "The GrowHaus is a nonprofit indoor farm in Denver's Elyria-Swansea neighborhood.
+                        Our vision is to catalyze a neighborhood-based food system in our community that is healthy, equitable,
                         and resident-driven",
                         email: "REACHOUT@THEGROWHAUS.ORG",
-                        phone_number:  "720-515-4751",
+                        phone_number: "720-515-4751",
                         google_plus_url: "http://instagram.com/thegrowhaus")
   end
+
   def self.call
     new.call
   end
