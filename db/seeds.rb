@@ -3,6 +3,8 @@ class Seed
   def call
     generate_users
     generate_organizations
+    generate_businesses
+    generate_events
   end
 
   def generate_users
@@ -72,6 +74,36 @@ class Seed
                         phone_number: "720-515-4751",
                         google_plus_url: "http://instagram.com/thegrowhaus")
   end
+
+  def generate_businesses
+    Business.create(name: "The GrowHaus",
+                    distance: 4.79142170460158, 
+                    url: "http://www.yelp.com/biz/the-growhaus-denver",
+                    address: "The GrowHaus",
+                    latitude: 39.7826999, 
+                    longitude: -104.9598726, 
+                    phone: "7205154751", 
+                    display_phone: "+1-720-515-4751", 
+                    image_url: "http://s3-media2.fl.yelpcdn.com/bphoto/9BGnaaYA7Uz-WHXE0h_UiQ/ms.jpg")
+  end
+
+  def generate_events
+    org = Organization.find_by(ein: 203533527)
+    biz = Business.find_by(name: "The GrowHaus")
+    Event.create(name: "Community Harvest & Fresh Produce Tasting",
+                 event_date: "2015-05-10",
+                 event_start: "2000-01-01 02:30:00",
+                 event_end: "2000-01-01 05:00:00",
+                 address: "4751 York S",
+                 city: "Denver",
+                 state: "CO",
+                 zipcode: "80216",
+                 latitude: 39.6929588317871,
+                 longitude: -104.960578918457,
+                 organization_id: org.id, 
+                 image_url: "http://www.growingraw.com/images/vegetable-garden-for-kids-picking-peas.jpg",
+                 business_id: biz.id )
+  end 
 
   def self.call
     new.call
