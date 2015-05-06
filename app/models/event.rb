@@ -5,6 +5,8 @@ class Event < ActiveRecord::Base
   validate :future?
   belongs_to :organization
   belongs_to :business
+  has_many :user_events
+  has_many :users, through: :user_events
   scope :future, -> { where(["event_date > ?", Date.today]).order(:event_date) }
 
   def month
