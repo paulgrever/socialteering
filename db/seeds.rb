@@ -90,10 +90,11 @@ class Seed
   def generate_events
     org = Organization.find_by(ein: 203533527)
     biz = Business.find_by(name: "The GrowHaus")
-    Event.create(name: "Community Harvest & Fresh Produce Tasting",
+    counter = 1
+    10.times do Event.create(name: "Community Harvest & Fresh Produce Tasting",
                  short_description: "Help us harvest the community garden. Then taste the freshest produce ever!",
                  long_description: "Help us harvest the community garden. Then taste the freshest produce ever!",
-                 event_date: "2015-05-10",
+                 event_date: "2015-05-#{counter}",
                  event_start: "2000-01-01 02:30:00",
                  event_end: "2000-01-01 05:00:00",
                  address: "4751 York S",
@@ -105,6 +106,8 @@ class Seed
                  organization_id: org.id, 
                  image_url: "http://www.growingraw.com/images/vegetable-garden-for-kids-picking-peas.jpg",
                  business_id: biz.id )
+    counter += 2
+    end
   end 
 
   def self.call
