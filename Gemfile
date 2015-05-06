@@ -23,6 +23,7 @@ gem "yelp", require: "yelp"
 gem "geocoder"
 gem "gmaps4rails"
 gem "faker"
+gem "responders"
 
 group :development, :test do
   gem "better_errors"
