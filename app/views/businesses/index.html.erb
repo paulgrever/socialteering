@@ -1,6 +1,6 @@
-<div class="container-fluid">
-  <div class="top">
-    <h1 class="text-center top">Business Search Results:</h1>
+<div class="container-fluid hero-unit8">
+  <div class="top point">
+    <h1 class="text-center top notice">Business Search Results:</h1>
   </div>
 
   <div class="row">
@@ -9,7 +9,7 @@
           <h1 class="notice text-center">Your search did not produce any results, please refine and search again</h1>
         </div>
     <% else %>
-      <div class="col-lg-9">
+      <div class="col-lg-offset-2 col-lg-8">
         <ul class="event-list">
         <% @businesses.each do |business| %>
         <li>    
@@ -20,23 +20,21 @@
                 <h2 class="title"><%= link_to business.name, business.url %> (<%= business.distance.round %> meters away)</h2>
                 <p class="desc"><%= business.snippet_text %></p>
                   <ul>
-                  <li class="org-biz-width">
+                  <li class="lister-width">
                     <a href="tel:<%#=business.phone_view %>"<span class="glyphicon"></span>
      
                         <%= business.raw_data["display_phone"] || business.raw_data["display_phone"]%>
 
                       </a>
                   </li>
-                  <li class="org-biz-width">
+                  <li class="lister-width-1 ">
                     <p>
                     <%= link_to (image_tag "yelp_logo.png"), business.url %> 
                     <%= link_to (image_tag business.rating_img_url_small), business.url %>
                     </p>
                   </li>
-                </ul>
-              </div>
-              <div class="social">
-                <%= link_to("Select Business",
+                  <li>
+                     <%= link_to("Select Business",
                             event_businesses_path("business[name]" => business.name, 
                                                   "business[distance]" => business.distance,
                                                   "business[url]" => business.url,
@@ -46,8 +44,9 @@
                                                   "business[phone]" => business.raw_data['phone'],
                                                   "business[display_phone]" => business.raw_data['display_phone'],
                                                   "business[image_url]" => business.raw_data['image_url']),
-                            method: :post
-                          ) %>
+                            method: :post, class: "btn btn-landing btn-sm") %>
+                  </li>
+                </ul>
               </div>
             </li>
         <% end %>
