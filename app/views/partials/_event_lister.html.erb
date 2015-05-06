@@ -13,14 +13,18 @@
                   <p class="desc hide-away"><%= @event.short_description %></p>
                 </div>
                   <ul>
-                  <li class="org-biz-width">
+                  <li class="lister-width">
                     <a class: "hide-away" href=<%=@event.organization.website%>><span class="glyphicon glyphicon-tree-deciduous"></span>Organization Site</a>
                   </li>
                   <%unless @event.business_id.nil? %>
-                   <li class="org-biz-width"> 
+                   <li class="lister-width"> 
                       <a href=<%= @event.business.url %>><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> <%= @event.business.name %></a>
                   </li>
                   <% end %>
+                  <li clas="lister-width">
+                    <a href=<%= event_path(@event) %>><span class="glyphicon glyphicon-bookmark"></span>Event Details</a>
+
+                  </li>
                 </ul>
               </div>
               <div class="social">
