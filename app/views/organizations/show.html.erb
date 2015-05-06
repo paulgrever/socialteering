@@ -4,7 +4,7 @@
       <div class="text-center">
         <h1 class="notice style-links filler2"><%= link_to( @organization.name, @organization.website) %></h1>
         <div class="col-md-offset-1 col-md-10">
-          <h4><%=@organization.description %> </h4>
+          <h4><em><%=@organization.description %></em></h4>
         </div>
       </div>
     </div>
@@ -22,18 +22,42 @@
   </div>
 
   <div class="row text-center">
-    <div class="col-md-8">
-      <h3>Upcoming Events</h3>
-      <% if @organization.any_events?%>
+    <div class="col-md-8 hero-unit6">
+    <% if @organization.any_events?%>
+      <h2 class="notice">Upcoming Events</h2>
       <ul class="event-list">
-          <%@organization.events.order(:event_date).each do |event| %>
+          <%@organization.display_four_future.each do |event| %>
           <%@event = event  %>
           <%= render  'partials/event_lister', locals: {event: @event} %>
           <% end %>
           </ul>
       <% else %>
-        <h4>Get started by planning your first event! Fill out the form to the right!</h4>
-        
+        <div>
+          <h1 class="stand-out-dark-back full-height filler  ">Get started by planning out your first <span class="notice">Socialteering</span> event!</h1>
+        </div>
+        <div>
+          <h3 class="notice filler2">Helpful hints for getting started:</h3>
+          <div class="col-md-offset-1 col-md-10">
+            <div class="text-center stand-out-dark-back">
+              <h4>1: Give your organization as much <span class="notice">publicity</span> as you can. Make sure to fill out all the addtional fields <span class="notice">(website, facebook, etc.)</span> for your organization!</h4>
+            </div>
+          </div>
+          <div class="col-md-offset-1 col-md-10">
+            <div class="text-center stand-out-dark-back">
+              <h4>2: Make your event equal parts <span class="notice">volunteering</span> and <span class="notice">social.</span> The social event is used to help entice potential volunteers and provide them a fun experience whil helping your organization.</h4>
+            </div>
+          </div>
+          <div class="col-md-offset-1 col-md-10">
+            <div class="text-center stand-out-dark-back">
+              <h4>3: Location, location <span class="notice">location!</span> The closer the social event is to your event, the better attendendance.</h4>
+            </div>
+          </div>
+          <div class="col-md-offset-1 col-md-10">
+            <div class="text-center stand-out-dark-back">
+              <h4>4: Make the event will <span class="notice">target</span> the volunteers you are looking to recruit. Pick a business that correlates with your organizations <span class="notice">values.</span></h4>
+            </div>
+          </div>
+        </div>
       <% end %>
     </div>
 

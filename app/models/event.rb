@@ -5,6 +5,7 @@ class Event < ActiveRecord::Base
   validate :future?
   belongs_to :organization
   belongs_to :business
+  scope :future, -> { where(["event_date > ?", Date.today]).order(:event_date) }
 
   def month
     event_date.strftime("%B")[0..2]
