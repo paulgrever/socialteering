@@ -6,13 +6,16 @@
   </div>
 
   <div class="row">
-    <div class="col-md-8 text-center">
+    <div class="col-md-6 text-center">
       <h3>Event Info:</h3>
         <h4>Date: <span class="notice"><%= @event.date_view %></span></h4>
         <h4>Start: <span class="notice"><%= @event.start_time%></span> | 
         End: <span class="notice"><%= @event.end_time%></span> </h4>
       <div class="style-links text-center">
-        <h4>Location: <em><%= link_to("#{@event.address}, #{@event.city} #{@event.state}, #{@event.zipcode} ", "https://www.google.com/maps/place/#{@event.address},+#{@event.city},+#{@event.state}+#{@event.zipcode}" , target: "_blank") %></em></h4>
+        <h4>Volunteer Location: <em><%= link_to("#{@event.address}, #{@event.city} #{@event.state}, #{@event.zipcode} ", "https://www.google.com/maps/place/#{@event.address},+#{@event.city},+#{@event.state}+#{@event.zipcode}" , target: "_blank") %></em></h4>
+      </div>
+      <div class="style-links text-center">
+        <h4>Social Location: <em><%= link_to("#{@event.business.address}, #{@event.city} #{@event.state}", "https://www.google.com/maps/place/#{@event.business.latitude},+#{@event.business.longitude}" , target: "_blank") %></em></h4>
       </div>
       <div>
         <h3>Event Description:</h3>
@@ -26,6 +29,11 @@
         <h3>Supported by:</h3>
           <h4 class="style-links"><%= link_to(@event.biz_name, @event.biz_web )  %></h4>
       </div>
+    </div>
+    <div class="col-md-6">
+        <div class="text-center">
+          <iframe width="700" height="450" frameborder="0" style="border:0" src=<%=  "https://www.google.com/maps/embed/v1/directions?mode=walking&origin=#{@event.latitude}%2C#{@event.longitude}&destination=#{@event.business.latitude}%2C#{@event.business.longitude}&key=#{ENV['google_map_key']}"%>></iframe>
+        </div>
     </div>
   </div>
 </div>
