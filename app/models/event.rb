@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
   def month
     event_date.strftime("%B")[0..2]
   end
-   
+
   def location
     [address, city, state, zipcode].to_a.compact.join(",")
   end

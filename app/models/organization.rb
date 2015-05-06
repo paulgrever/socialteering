@@ -23,7 +23,6 @@ class Organization < ActiveRecord::Base
     events.any?
   end
 
-
   def display_four_future
     events.where(["event_date > ?", Date.today]).order(:event_date).take(4)
   end
