@@ -10,11 +10,15 @@
               <div class="info">
                 <h2 class="title"><%= @event.name %> </h2>
                 <div>
-                  <p class="desc hide-away">Spend time helping bring union station back to it's glory days. Then head down the track to Sixth Engine for special happy hour.</p>
+                  <p class="desc hide-away"><%= @event.short_description %></p>
                 </div>
                   <ul>
-                  <li class="org-biz-width"><a  class: "hide-away" href=<%=@event.organization.website%>><span class="glyphicon glyphicon-tree-deciduous"></span>Organization Site</a></li>
-                   <li class="org-biz-width"a href="http://www.sixthengine.com"/><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> Social Site</a></li>
+                  <li class="org-biz-width">
+                    <a class: "hide-away" href=<%=@event.organization.website%>><span class="glyphicon glyphicon-tree-deciduous"></span>Organization Site</a>
+                  </li>
+                   <li class="org-biz-width"> 
+                      <a href=<%= @event.business.url %>><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> <%= @event.business.name %></a>
+                  </li>
                 </ul>
               </div>
               <div class="social">
