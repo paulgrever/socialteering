@@ -27,7 +27,7 @@
           <% end %>
 
           <li><%= link_to '#', id: "cart" do %>
-            <span class='glyphicon glyphicon-bookmark' aria-hidden='true'><%= "Events(3)" %></span>
+            <span class='glyphicon glyphicon-bookmark' aria-hidden='true'>Events(<%=current_user.events.count %>)</span>
             <% end %></li>
             <li> <%= image_tag( current_user.image, class:"img-circle navbar-brand-image") %> <%= current_user.first_name %> </li>
 
