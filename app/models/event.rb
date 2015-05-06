@@ -25,6 +25,34 @@ class Event < ActiveRecord::Base
     end
   end
 
+  def date_view
+    event_date.strftime("%A, %B%e, %Y") 
+  end
+
+  def start_time
+    event_start.strftime("%l:%M %P")
+  end
+
+  def end_time
+    event_end.strftime("%l:%M %P")
+  end
+
+  def org_name
+    organization.name
+  end
+
+  def org_web
+    organization.website
+  end
+
+  def biz_name
+    business.name
+  end
+
+  def biz_web
+    business.url
+  end
+
   def latitude_and_longitude?
     if latitude.nil? && longitude.nil?
       proximity = Geocoder.coordinates(city)
