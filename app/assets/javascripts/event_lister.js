@@ -11,7 +11,7 @@ $(document).on("ready page:load", function() {
 
     request.done(function() {
       $("#create-event").hide();
-      $("#event-confirm").show()
+      $("#event-confirm").show();
     });
   };
 
