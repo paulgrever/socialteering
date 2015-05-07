@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   # user
   resources :users, only: [:show]
-  get 'feed.rss', to: 'feeds#rss', :format => 'rss'
+  get "feed.rss", to: "feeds#rss", format: 'rss'
   # events
   # organizations
   resources :organizations, except: [:destroy]

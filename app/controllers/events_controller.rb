@@ -37,3 +37,4 @@ class EventsController < ApplicationController
                                   :image_url)
   end
 end
+
