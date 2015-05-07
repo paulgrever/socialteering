@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   # user
   resources :users, only: [:show]
-
+  get "feed.rss", to: "feeds#rss", format: 'rss'
   # events
   # organizations
   resources :organizations, except: [:destroy]
@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :user_events, only: [:create]
+      resources :events, only: [:index, :show]
     end
   end
 end
