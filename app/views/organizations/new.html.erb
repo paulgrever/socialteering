@@ -1,6 +1,7 @@
 <div class="container-fluid form-container">
   <div class= "row top">
-    <h1 class="text-center">Become a registered Socialteering Community Organization</h1>
+    <h1 class="text-center">Become a registered <span class="notice">Socialteering </span>Community Organization</h1>
+    <h3 class="text-center spacer"><em>As a registered Socialteering non-profit organization, you will be able to create <span class="notice">Socialteering</span> events that are broadcast to all of our subscribers.</em></h3>
     <% unless current_user.present? %>
       <div class = "row">
         <h4 class="text-center alarm">You must be a registered user to become an organization</h4>
@@ -10,14 +11,16 @@
     <div class="row">
 
     <div class="col-md-5 sign-up-form">
-      <h4>Quick register, simply enter your EIN.</h4>
-      <p class="notice">We accept all 501(c) organizations.</p>
+      <h3>Quick register, simply enter your EIN.</h3>
+      <h4 class="notice">We accept all 501(c) organizations.</h4>
       <%= render "partials/new_organization" %>
     </div>
-    <div class="col-md-7 sign-up-form">
-      <h4>Request to Become A Socialteering Organization</h4>
-      <p class="notice">Add your information the old fashioned way and our team will review your request and get you registerd in no time flat.</p>
-      <div class="btn btn-lg btn-landing  center-text col-sm-offset-5 col-sm-2 " id="toggler-btn"> Sign Up</div>
+    <div class="col-md-7 sign-up-form text-center">
+      <h3>Request to Become A Socialteering Organization</h3>
+      <h4 class="notice text-center mini-space"><span class="stand-out-dark-back">Don't have an EIN?</span> Add your information the old fashioned way and our team will review your request and determine if we are able to work with your organization.</h4>
+      <div class="top">
+       <div class="btn btn-lg btn-landing  center-text col-sm-offset-5 col-sm-2 " id="toggler-btn"> Sign Up</div>
+      </div>
     </div>
   </div>
 
