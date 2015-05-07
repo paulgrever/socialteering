@@ -1,5 +1,5 @@
 $(document).on("ready page:load", function() {
-
+  $("#event-confirm").hide();
   var createEvent = function () {
     var userId = $(this).attr("data-user");
     var eventId = $(this).attr("data-event");
@@ -10,7 +10,8 @@ $(document).on("ready page:load", function() {
     });
 
     request.done(function() {
-      console.log("YOLO");
+      $("#create-event").hide();
+      $("#event-confirm").show();
     });
   };
 

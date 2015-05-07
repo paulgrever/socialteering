@@ -4,7 +4,12 @@
     <h2 class="notice"><%= @event.name %></h2>
     <h4><%= @event.short_description %> </h4>
     <% if current_user.present? %>
+      <% unless current_user.attending?(@event) %>
         <button type="button" class="btn btn-landing" id="create-event" data-event="<%=@event.id%>" data-user="<%=current_user.id%>">I am attending</button>
+        <div id="event-confirm">
+          <h3 class="alarm">You are registered for <%= @event.name %>!</h3>
+        </div>
+        <% end %>
     <% end %>
   </div>
 

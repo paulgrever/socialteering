@@ -1,0 +1,18 @@
+<div class="container-fluid top">
+  <div class="row text-center contact-info">
+    <h1><%= current_user.first_name %>'s Upcoming Events </h1>
+    </div>
+  <div class="top">
+    <div class="row">
+      <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+          <ul class="event-list">
+
+            <% @events.each do |event| %>
+              <% @event = event %>
+              <%= render  'partials/event_lister', locals: {event: @event} %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
