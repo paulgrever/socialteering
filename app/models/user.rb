@@ -24,4 +24,8 @@ class User < ActiveRecord::Base
     user.save
     user
   end
+
+  def attending?(event)
+    events.include?(event.id)
+  end
 end
