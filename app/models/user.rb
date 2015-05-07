@@ -26,6 +26,6 @@ class User < ActiveRecord::Base
   end
 
   def attending?(event)
-    events.include?(event.id)
+    events.include?(event)
   end
 end
