@@ -1,5 +1,4 @@
 class FeedsController < ApplicationController
-
   layout false
 
   def rss
