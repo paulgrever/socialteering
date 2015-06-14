@@ -1,28 +1,42 @@
-== README
+### Socialteering
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Volunteer organizations are missing out with millenial volunteers. Many volunteer organizations are difficult to join and require long term time commitements. 
 
-Things you may want to cover:
+Socialteering makes it easy for Nonprofits to curate one time social volunteering opportunities. Volunteers can sign up for events which are paired with a social activity. *Example: Graffiti removal at Lowell School followed by coffee at Zoma*
 
-* Ruby version
+#### A win, win, win: 
 
-* System dependencies
+* Users 
+  * Volunteer without long term committment.
+  * Get a chance to meet like minded volunteers and socialize with them. 
 
-* Configuration
+* Nonprofits 
+  * Collect information on volunteers interested in their cause for future recruitement/donations.
+  * Complete work for the immediate community. 
 
-* Database creation
+* Business
+  * Support the local community. 
+  * Gain business during off peak hours. 
+  * Obtain tax information regarding the work you have supports. 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Visit Us Online](https://socialteering.herokuapp.com/)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### Project Dependencies
+
+* Yelp -- required for business geolocating -- needs `yelp_consumer_key`, `yelp_consumer_secret`, `yelp_token`, and `yelp_token_secret` ENV vars
+* Facebook -- used oauth authentication -- needs `facebook_key` and `facebook_secret` ENV vars
+* Bing Maps -- used geolocating volunteering events -- needs `bing_map_key` ENV vars
+* Google Maps Iframe -- used for displaying walking directions from volunteering event to business --needs -- `google_map_key`
+
+
+### Heroku
+
+This application is already deployed to [heroku](https://socialteering.herokuapp.com/)
+
+
+### Testing
+
+This project uses RSpec for its test suite. Run the tests with `rake`, `rake spec`, or `rspec`.
+
+
